@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="xxrco.oracle.apps.pay.balanza.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="BalanzaAM"
+      FullName="xxrco.oracle.apps.pay.balanza.server.BalanzaAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="XxRcoPayjaustesBalanzaVO"
+      FullName="xxrco.oracle.apps.pay.balanza.server.XxRcoPayjaustesBalanzaVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

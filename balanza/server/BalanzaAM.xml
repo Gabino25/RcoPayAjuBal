@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="BalanzaAM"
+   ComponentClass="xxrco.oracle.apps.pay.balanza.server.BalanzaAMImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="XxRcoPayjaustesBalanzaVO1"
+      ViewObjectName="xxrco.oracle.apps.pay.balanza.server.XxRcoPayjaustesBalanzaVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="AnioVO1"
+      ViewObjectName="xxrco.oracle.apps.pay.balanza.pop.AnioVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="GrupoNominaVO1"
+      ViewObjectName="xxrco.oracle.apps.pay.balanza.pop.GrupoNominaVO" >
+   </ViewUsage>
+</AppModule>

@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="XxRcoPayjaustesBalanzaVO"
+   SelectList="XxRcoPayAjustesBalanzaEO.ID, 
+       XxRcoPayAjustesBalanzaEO.ANIO, 
+       XxRcoPayAjustesBalanzaEO.NUMERO_MES, 
+       XxRcoPayAjustesBalanzaEO.MES, 
+       XxRcoPayAjustesBalanzaEO.GRUPO_NOMINA, 
+       XxRcoPayAjustesBalanzaEO.AJU_IMSS_DEDUCIBLE, 
+       XxRcoPayAjustesBalanzaEO.AJU_IMSS_NO_DEDUCIBLE, 
+       XxRcoPayAjustesBalanzaEO.CANC_FA_PERIODO_ANTERIOR, 
+       XxRcoPayAjustesBalanzaEO.CANC_FA, 
+       XxRcoPayAjustesBalanzaEO.CANC_SYR, 
+       XxRcoPayAjustesBalanzaEO.CANC_PROV_PRIM_VAC, 
+       XxRcoPayAjustesBalanzaEO.CANC_PROV_AGUINALDO, 
+       XxRcoPayAjustesBalanzaEO.CANC_UTILES_ESCOLARES, 
+       XxRcoPayAjustesBalanzaEO.CREATED_BY, 
+       XxRcoPayAjustesBalanzaEO.CREATION_DATE, 
+       XxRcoPayAjustesBalanzaEO.LAST_UPDATED_BY, 
+       XxRcoPayAjustesBalanzaEO.LAST_UPDATE_DATE, 
+       XxRcoPayAjustesBalanzaEO.LAST_UPDATE_LOGIN, 
+       XxRcoPayAjustesBalanzaEO.CALC_CUOTA_SS_ER_INF, 
+       XxRcoPayAjustesBalanzaEO.CALC_CUOTA_SS_ER_RET, 
+       XxRcoPayAjustesBalanzaEO.CALC_CUOTA_SS_ER_STA, 
+       XxRcoPayAjustesBalanzaEO.CUOTA_PATRONAL, 
+       XxRcoPayAjustesBalanzaEO.AJUSTE_ISN, 
+       XxRcoPayAjustesBalanzaEO.AJUSTE_LENTES"
+   FromList="XXRCO_PAY_AJUSTES_BALANZA XxRcoPayAjustesBalanzaEO"
+   BindingStyle="OracleName"
+   CustomQuery="false"
+   RowClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayjaustesBalanzaVORowImpl"
+   ComponentClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayjaustesBalanzaVOImpl"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="XxRcoPayAjustesBalanzaEO"
+      Entity="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjustesBalanzaEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Anio"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="Anio"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="ANIO" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NumeroMes"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="NumeroMes"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="NUMERO_MES" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mes"
+      IsNotNull="true"
+      EntityAttrName="Mes"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="MES" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="GrupoNomina"
+      EntityAttrName="GrupoNomina"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="GRUPO_NOMINA" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AjuImssDeducible"
+      EntityAttrName="AjuImssDeducible"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="AJU_IMSS_DEDUCIBLE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AjuImssNoDeducible"
+      EntityAttrName="AjuImssNoDeducible"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="AJU_IMSS_NO_DEDUCIBLE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancFaPeriodoAnterior"
+      EntityAttrName="CancFaPeriodoAnterior"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CANC_FA_PERIODO_ANTERIOR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancFa"
+      EntityAttrName="CancFa"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CANC_FA" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancSyr"
+      EntityAttrName="CancSyr"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CANC_SYR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancProvPrimVac"
+      EntityAttrName="CancProvPrimVac"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CANC_PROV_PRIM_VAC" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancProvAguinaldo"
+      EntityAttrName="CancProvAguinaldo"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CANC_PROV_AGUINALDO" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CancUtilesEscolares"
+      EntityAttrName="CancUtilesEscolares"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CANC_UTILES_ESCOLARES" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      EntityAttrName="CreatedBy"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      IsNotNull="true"
+      EntityAttrName="CreationDate"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CalcCuotaSsErInf"
+      EntityAttrName="CalcCuotaSsErInf"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CALC_CUOTA_SS_ER_INF" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CalcCuotaSsErRet"
+      EntityAttrName="CalcCuotaSsErRet"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CALC_CUOTA_SS_ER_RET" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CalcCuotaSsErSta"
+      EntityAttrName="CalcCuotaSsErSta"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CALC_CUOTA_SS_ER_STA" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CuotaPatronal"
+      EntityAttrName="CuotaPatronal"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="CUOTA_PATRONAL" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AjusteIsn"
+      EntityAttrName="AjusteIsn"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="AJUSTE_ISN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="AjusteLentes"
+      EntityAttrName="AjusteLentes"
+      EntityUsage="XxRcoPayAjustesBalanzaEO"
+      AliasName="AJUSTE_LENTES" >
+   </ViewAttribute>
+</ViewObject>
