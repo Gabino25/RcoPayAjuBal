@@ -1,0 +1,14 @@
+RcoPayAjuBal
+
+echo "# RCO Payroll Ajustes Balanza" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Gabino25/RcoPayAjuBal.git
+git push -u origin main
+
+
+git add balanza
+git commit -m "ddMMYYYYHHSS"
+git push -u origin main
