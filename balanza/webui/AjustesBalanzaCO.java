@@ -208,17 +208,18 @@ public class AjustesBalanzaCO extends OAControllerImpl
            messageLovInputBean = (OAMessageLovInputBean)webBean.findChildRecursive("Anio1");
            if(null!=messageLovInputBean&&null!=messageLovInputBean.getText(pageContext)){
                strAnio = messageLovInputBean.getText(pageContext); 
+               try {
+                   numAnio = new oracle.jbo.domain.Number(strAnio);
+               } catch (SQLException e) {
+                   System.out.println("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode());
+                   throw new OAException("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode(),OAException.ERROR); 
+               }
            }
            messageLovInputBean = (OAMessageLovInputBean)webBean.findChildRecursive("GrupoNomina1");
            if(null!=messageLovInputBean&&null!=messageLovInputBean.getText(pageContext)){
                strGrupoNomina = messageLovInputBean.getText(pageContext); 
            }
-           try {
-               numAnio = new oracle.jbo.domain.Number(strAnio);
-           } catch (SQLException e) {
-               System.out.println("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode());
-               throw new OAException("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode(),OAException.ERROR); 
-           }
+          
            balanzaAMImpl.consultarInfo(numAnio
                                       ,strGrupoNomina
                                       );
@@ -278,17 +279,20 @@ public class AjustesBalanzaCO extends OAControllerImpl
           messageLovInputBean = (OAMessageLovInputBean)webBean.findChildRecursive("Anio11");
           if(null!=messageLovInputBean&&null!=messageLovInputBean.getText(pageContext)){
               strAnio = messageLovInputBean.getText(pageContext); 
-              
+              try {
+                numAnio = new oracle.jbo.domain.Number(strAnio);
+              } catch (SQLException e) {
+                System.out.println("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode());
+                throw new OAException("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode(),OAException.ERROR); 
+              }
           }
           messageLovInputBean = (OAMessageLovInputBean)webBean.findChildRecursive("GrupoNomina11");
           if(null!=messageLovInputBean&&null!=messageLovInputBean.getText(pageContext)){
               strGrupoNomina = messageLovInputBean.getText(pageContext); 
           }
-          try {
-            numAnio = new oracle.jbo.domain.Number(strAnio);
-          } catch (SQLException e) {
-            System.out.println("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode());
-            throw new OAException("SQLException en covertir el anio:"+strAnio+", "+e.getErrorCode(),OAException.ERROR); 
+         
+          if(null==numAnio&&null==strGrupoNomina){
+              throw new OAException("No se ha elegido ningun parametro",OAException.ERROR);
           }
           balanzaAMImpl.borrarAjustes(numAnio
                                      ,strGrupoNomina

@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="XxRcoPayAjuBzaProjEO"
+   DBObjectType="table"
+   DBObjectName="XXRCO_PAY_AJU_BZA_PROJ"
+   AliasName="XxRcoPayAjuBzaProjEO"
+   BindingStyle="OracleName"
+   UseGlueCode="false"
+   RowClass="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEOImpl"
+   DefClass="oracle.apps.fnd.framework.server.OAEntityDefImpl"
+   CollClass="oracle.apps.fnd.framework.server.OAEntityCache" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|Val" />
+   </DesignTime>
+   <Attribute
+      Name="Id"
+      IsNotNull="true"
+      ColumnName="ID"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Anio"
+      IsUnique="true"
+      IsNotNull="true"
+      ColumnName="ANIO"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="NumeroMes"
+      IsUnique="true"
+      IsNotNull="true"
+      ColumnName="NUMERO_MES"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Mes"
+      IsNotNull="true"
+      Precision="100"
+      ColumnName="MES"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="100" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="GrupoNomina"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="200"
+      ColumnName="GRUPO_NOMINA"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="200" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Proyecto"
+      IsUnique="true"
+      IsNotNull="true"
+      Precision="200"
+      ColumnName="PROYECTO"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="200" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="RegistroPatronal"
+      IsNotNull="true"
+      Precision="300"
+      ColumnName="REGISTRO_PATRONAL"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="300" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CalcCuotaSsErInf"
+      ColumnName="CALC_CUOTA_SS_ER_INF"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CalcCuotaSsErRet"
+      ColumnName="CALC_CUOTA_SS_ER_RET"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CalcCuotaSsErSta"
+      ColumnName="CALC_CUOTA_SS_ER_STA"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="D002imss"
+      ColumnName="D002IMSS"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="D002imssSta"
+      ColumnName="D002IMSS_STA"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      ColumnName="CREATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      IsNotNull="true"
+      ColumnName="CREATION_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="DATE"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATE_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="DATE"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateLogin"
+      IsNotNull="true"
+      ColumnName="LAST_UPDATE_LOGIN"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="SysC001114720" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114720" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114721" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Anio" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ANIO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114721" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114722" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.NumeroMes" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;NUMERO_MES&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114722" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114723" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Mes" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;MES&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114723" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114724" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.GrupoNomina" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;GRUPO_NOMINA&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114724" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114725" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Proyecto" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;PROYECTO&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114725" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114726" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.RegistroPatronal" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;REGISTRO_PATRONAL&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114726" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114727" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.CreatedBy" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;CREATED_BY&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114727" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114728" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.CreationDate" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;CREATION_DATE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114728" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114729" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.LastUpdatedBy" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;LAST_UPDATED_BY&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114729" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114730" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.LastUpdateDate" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;LAST_UPDATE_DATE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114730" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001114731" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.LastUpdateLogin" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;LAST_UPDATE_LOGIN&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001114731" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="XxrcoPayAjuBzaProjPk" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="XXRCO_PAY_AJU_BZA_PROJ_PK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="XxrcoPayAjuBzaProjU1" >
+      <AttrArray Name="Attributes">
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Anio" />
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.NumeroMes" />
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.GrupoNomina" />
+         <Item Value="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO.Proyecto" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isUnique" Value="true" />
+         <Attr Name="_DBObjectName" Value="XXRCO_PAY_AJU_BZA_PROJ_U1" />
+      </DesignTime>
+   </Key>
+</Entity>

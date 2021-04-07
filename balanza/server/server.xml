@@ -7,12 +7,17 @@
    PackageName="xxrco.oracle.apps.pay.balanza.server" >
    <DesignTime>
       <Attr Name="_ejbPackage" Value="false" />
-      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
    </DesignTime>
    <Containee
       Name="BalanzaAM"
       FullName="xxrco.oracle.apps.pay.balanza.server.BalanzaAM"
       ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="XxRcoPayAjuBzaProjVO"
+      FullName="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjVO"
+      ObjectType="ViewObject" >
    </Containee>
    <Containee
       Name="XxRcoPayjaustesBalanzaVO"

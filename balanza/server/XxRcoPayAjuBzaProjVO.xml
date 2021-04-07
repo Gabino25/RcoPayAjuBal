@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="XxRcoPayAjuBzaProjVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjVORowImpl"
+   ComponentClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjVOImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT XxRcoPayAjuBzaProjEO.ID, 
+       XxRcoPayAjuBzaProjEO.ANIO, 
+       XxRcoPayAjuBzaProjEO.NUMERO_MES, 
+       XxRcoPayAjuBzaProjEO.MES, 
+       XxRcoPayAjuBzaProjEO.GRUPO_NOMINA, 
+       XxRcoPayAjuBzaProjEO.PROYECTO, 
+       XxRcoPayAjuBzaProjEO.REGISTRO_PATRONAL, 
+       XxRcoPayAjuBzaProjEO.CALC_CUOTA_SS_ER_INF, 
+       XxRcoPayAjuBzaProjEO.CALC_CUOTA_SS_ER_RET, 
+       XxRcoPayAjuBzaProjEO.CALC_CUOTA_SS_ER_STA, 
+       XxRcoPayAjuBzaProjEO.D002IMSS, 
+       XxRcoPayAjuBzaProjEO.D002IMSS_STA, 
+       XxRcoPayAjuBzaProjEO.CREATED_BY, 
+       XxRcoPayAjuBzaProjEO.CREATION_DATE, 
+       XxRcoPayAjuBzaProjEO.LAST_UPDATED_BY, 
+       XxRcoPayAjuBzaProjEO.LAST_UPDATE_DATE, 
+       XxRcoPayAjuBzaProjEO.LAST_UPDATE_LOGIN
+FROM XXRCO_PAY_AJU_BZA_PROJ XxRcoPayAjuBzaProjEO
+ORDER BY XxRcoPayAjuBzaProjEO.NUMERO_MES ASC , XxRcoPayAjuBzaProjEO.REGISTRO_PATRONAL ASC
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="XxRcoPayAjuBzaProjEO"
+      Entity="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="true" />
+         <Attr Name="_queryOrderBy" Value="NUMERO_MES ASC , REGISTRO_PATRONAL ASC" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Id"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Anio"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="Anio"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="ANIO" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="NumeroMes"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="NumeroMes"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="NUMERO_MES" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Mes"
+      IsNotNull="true"
+      EntityAttrName="Mes"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="MES" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="GrupoNomina"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="GrupoNomina"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="GRUPO_NOMINA" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Proyecto"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="Proyecto"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="PROYECTO" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="RegistroPatronal"
+      IsNotNull="true"
+      EntityAttrName="RegistroPatronal"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="REGISTRO_PATRONAL" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CalcCuotaSsErInf"
+      EntityAttrName="CalcCuotaSsErInf"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="CALC_CUOTA_SS_ER_INF" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CalcCuotaSsErRet"
+      EntityAttrName="CalcCuotaSsErRet"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="CALC_CUOTA_SS_ER_RET" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CalcCuotaSsErSta"
+      EntityAttrName="CalcCuotaSsErSta"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="CALC_CUOTA_SS_ER_STA" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="D002imss"
+      EntityAttrName="D002imss"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="D002IMSS" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="D002imssSta"
+      EntityAttrName="D002imssSta"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="D002IMSS_STA" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      IsNotNull="true"
+      EntityAttrName="CreatedBy"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      IsNotNull="true"
+      EntityAttrName="CreationDate"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      IsNotNull="true"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      IsNotNull="true"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+</ViewObject>

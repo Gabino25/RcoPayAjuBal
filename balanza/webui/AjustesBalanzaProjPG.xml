@@ -1,12 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
    <content>
-      <oa:pageLayout id="PageLayoutRN" windowTitle="Ajustes Balanza Nomina" title="Ajustes Balanza Nomina" scope="." amDefName="xxrco.oracle.apps.pay.balanza.server.BalanzaAM" controllerClass="xxrco.oracle.apps.pay.balanza.webui.AjustesBalanzaCO">
+      <oa:pageLayout id="region1" windowTitle="Ajustes Balanza Proyectos" title="Ajustes Balanza Proyectos" controllerClass="xxrco.oracle.apps.pay.balanza.webui.AjustesBalanzaProjCO" amDefName="xxrco.oracle.apps.pay.balanza.server.BalanzaAM">
          <ui:corporateBranding>
             <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
          </ui:corporateBranding>
          <ui:contents>
-            <oa:header id="region1" text="Ajustes">
+            <oa:header id="region11" text="Ajustes">
                <ui:contents>
                   <oa:tableLayout id="region31" hAlign="center">
                      <ui:contents>
@@ -14,7 +14,7 @@
                            <ui:contents>
                               <oa:cellFormat id="region51">
                                  <ui:contents>
-                                    <oa:messageLovInput id="Anio1" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/AnioLOVRN" prompt="Año">
+                                    <oa:messageLovInput id="Anio1" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/AnioProjectsLOVRN" prompt="Año">
                                        <lovMappings>
                                           <lovMap id="lovMap1" lovItem="Meaning" resultTo="Anio1" criteriaFrom="Anio1"/>
                                        </lovMappings>
@@ -23,9 +23,19 @@
                               </oa:cellFormat>
                               <oa:cellFormat id="region61">
                                  <ui:contents>
-                                    <oa:messageLovInput id="GrupoNomina1" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/GrupoNominaLOVRN" prompt="Grupo Nomina">
+                                    <oa:messageLovInput id="GrupoNomina1" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/GrupoNominaProjectsLOVRN" prompt="Grupo Nomina">
                                        <lovMappings>
                                           <lovMap id="lovMap2" lovItem="Meaning" criteriaFrom="GrupoNomina1" resultTo="GrupoNomina1"/>
+                                       </lovMappings>
+                                    </oa:messageLovInput>
+                                 </ui:contents>
+                              </oa:cellFormat>
+                              <oa:cellFormat id="region611">
+                                 <ui:contents>
+                                    <oa:messageLovInput id="Mes" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/MesProjectsLOVRN" prompt="Mes">
+                                       <lovMappings>
+                                          <lovMap id="lovMap21" lovItem="Meaning" criteriaFrom="Mes" resultTo="Mes"/>
+                                          <lovMap id="lovMap22" lovItem="Code" resultTo="MesFV"/>
                                        </lovMappings>
                                     </oa:messageLovInput>
                                  </ui:contents>
@@ -43,9 +53,9 @@
                         </oa:rowLayout>
                      </ui:contents>
                   </oa:tableLayout>
-                  <oa:advancedTable id="XxRcoPayjaustesBalanzaVORN" viewName="XxRcoPayjaustesBalanzaVO1" blockSize="50">
+                  <oa:advancedTable id="XxRcoPayAjuBzaProjVORN" viewName="XxRcoPayAjuBzaProjVO1" blockSize="200">
                      <ui:contents>
-                        <oa:column id="column1">
+                        <oa:column id="AnioCol">
                            <ui:columnHeader>
                               <oa:sortableHeader id="sortableHeader1" prompt="Año"/>
                            </ui:columnHeader>
@@ -53,7 +63,7 @@
                               <oa:messageStyledText id="anio" dataType="NUMBER" viewAttr="Anio"/>
                            </ui:contents>
                         </oa:column>
-                        <oa:column id="column2">
+                        <oa:column id="MesCol">
                            <ui:columnHeader>
                               <oa:sortableHeader id="sortableHeader2" prompt="Mes"/>
                            </ui:columnHeader>
@@ -61,12 +71,20 @@
                               <oa:messageStyledText id="item2" viewAttr="Mes"/>
                            </ui:contents>
                         </oa:column>
-                        <oa:column id="CuotaPatronalCol" totalValue="true" columnDataFormat="numberFormat">
+                        <oa:column id="ProyectoCol" totalValue="false" columnDataFormat="textFormat">
                            <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader31" prompt="Cuota Patronal"/>
+                              <oa:sortableHeader id="sortableHeader31112" prompt="Proyecto"/>
                            </ui:columnHeader>
                            <ui:contents>
-                              <oa:messageTextInput id="CuotaPatronal" viewAttr="CuotaPatronal" required="yes" dataType="NUMBER"/>
+                              <oa:messageStyledText id="Proyecto" viewAttr="Proyecto" required="yes" dataType="VARCHAR2"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="RegistroPatronalCol" totalValue="false" columnDataFormat="textFormat" cellNoWrapFormat="true">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader311121" prompt="Registo Patronal"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageStyledText id="RegistroPatronal" viewAttr="RegistroPatronal" required="yes" dataType="VARCHAR2"/>
                            </ui:contents>
                         </oa:column>
                         <oa:column id="CalcCuotaSsErInfCol" totalValue="true" columnDataFormat="numberFormat">
@@ -93,84 +111,20 @@
                               <oa:messageTextInput id="CalcCuotaSsErSta" viewAttr="CalcCuotaSsErSta" required="yes" dataType="NUMBER"/>
                            </ui:contents>
                         </oa:column>
-                        <oa:column id="AjuImssDeducibleCol" totalValue="true" columnDataFormat="numberFormat">
+                        <oa:column id="D002imssCol" totalValue="true" columnDataFormat="numberFormat">
                            <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader3" prompt="AJUSTES  SUELDOS DEDUCIBLES (obrero)"/>
+                              <oa:sortableHeader id="sortableHeader4" prompt="D002 I.M.S.S."/>
                            </ui:columnHeader>
                            <ui:contents>
-                              <oa:messageTextInput id="AjuImssDeducible" viewAttr="AjuImssDeducible" required="yes" dataType="NUMBER"/>
+                              <oa:messageTextInput id="D002imss" viewAttr="D002imss" dataType="NUMBER" required="yes"/>
                            </ui:contents>
                         </oa:column>
-                        <oa:column id="AjuImssNoDeducibleCol" totalValue="true" columnDataFormat="numberFormat">
+                        <oa:column id="D002imssStaCol" totalValue="true" columnDataFormat="numberFormat">
                            <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader4" prompt="AJUSTES  SUELDOS NO DEDUCIBLES (obrero)"/>
+                              <oa:sortableHeader id="sortableHeader41" prompt="D002 I.M.S.S. Separation due to Age"/>
                            </ui:columnHeader>
                            <ui:contents>
-                              <oa:messageTextInput id="AjuImssNoDeducible" viewAttr="AjuImssNoDeducible" dataType="NUMBER" required="yes"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="CancFaPeriodoAnteriorCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader5" prompt="Cancelación FA Periodo Anterior"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="CancFaPeriodoAnterior" viewAttr="CancFaPeriodoAnterior" required="yes" dataType="NUMBER"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="CancFaCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader6" prompt="Cancelación FA"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="CancFa" viewAttr="CancFa" required="yes" dataType="NUMBER"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="CancSyrCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader7" prompt="Cancelación SYR"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="CancSyr" viewAttr="CancSyr" required="yes" dataType="NUMBER"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="CancProvPrimVacCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader8" prompt="CANC PROV PRIM VAC"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="CancProvPrimVac" viewAttr="CancProvPrimVac" required="yes" dataType="NUMBER"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="CancProvAguinaldoCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader9" prompt="CANC PROV AGUINALDO"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="CancProvAguinaldo" viewAttr="CancProvAguinaldo" required="yes" dataType="NUMBER"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="CancUtilesEscolaresCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader10" prompt="Cancelacion Utiles Escolares"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="CancUtilesEscolares" viewAttr="CancUtilesEscolares" dataType="NUMBER" required="yes"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="AjusteIsnCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader101" prompt="Ajuste ISN"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="AjusteIsn" viewAttr="AjusteIsn" dataType="NUMBER" required="yes"/>
-                           </ui:contents>
-                        </oa:column>
-                        <oa:column id="AjusteLentesCol" totalValue="true" columnDataFormat="numberFormat">
-                           <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader1011" prompt="Ajuste Lentes"/>
-                           </ui:columnHeader>
-                           <ui:contents>
-                              <oa:messageTextInput id="AjusteLentes" viewAttr="AjusteLentes" dataType="NUMBER" required="yes"/>
+                              <oa:messageTextInput id="D002imssSta" viewAttr="D002imssSta" dataType="NUMBER" required="yes"/>
                            </ui:contents>
                         </oa:column>
                         <oa:column id="GrupoNominaCol">
@@ -229,16 +183,16 @@
                      <ui:contents>
                         <oa:cellFormat id="region511">
                            <ui:contents>
-                              <oa:messageLovInput id="Anio11" dataType="NUMBER" prompt="Año" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/AnioLOVRN">
+                              <oa:messageLovInput id="Anio11" dataType="NUMBER" prompt="Año" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/AnioProjectsLOVRN">
                                  <lovMappings>
                                     <lovMap id="lovMap3" lovItem="Meaning" resultTo="Anio11" criteriaFrom="Anio11"/>
                                  </lovMappings>
                               </oa:messageLovInput>
                            </ui:contents>
                         </oa:cellFormat>
-                        <oa:cellFormat id="region611">
+                        <oa:cellFormat id="region6111">
                            <ui:contents>
-                              <oa:messageLovInput id="GrupoNomina11" prompt="Grupo Nomina" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/GrupoNominaLOVRN">
+                              <oa:messageLovInput id="GrupoNomina11" prompt="Grupo Nomina" externalListOfValues="/xxrco/oracle/apps/pay/balanza/lov/webui/GrupoNominaProjectsLOVRN">
                                  <lovMappings>
                                     <lovMap id="lovMap4" lovItem="Meaning" resultTo="GrupoNomina11" criteriaFrom="GrupoNomina11"/>
                                  </lovMappings>
@@ -262,11 +216,12 @@
                <ui:contents>
                   <oa:submitButton id="item32" text="Guardar Cambios" prompt="Guardar Cambios">
                      <ui:primaryClientAction>
-                        <ui:fireAction event="guardarCambiosEvt"/>
+                        <ui:fireAction event="guardarCambiosEvt" id="fireAction112"/>
                      </ui:primaryClientAction>
                   </oa:submitButton>
                </ui:contents>
             </oa:pageButtonBar>
+            <oa:formValue id="MesFV" dataType="NUMBER"/>
          </ui:contents>
       </oa:pageLayout>
    </content>
