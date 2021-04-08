@@ -226,6 +226,17 @@
          <Attr Name="_DisplaySize" Value="22" />
       </DesignTime>
    </Attribute>
+   <Attribute
+      Name="CuotaPatronal"
+      ColumnName="CUOTA_PATRONAL"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="XXRCO_PAY_AJU_BZA_PROJ" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
    <Key
       Name="SysC001114720" >
       <AttrArray Name="Attributes">

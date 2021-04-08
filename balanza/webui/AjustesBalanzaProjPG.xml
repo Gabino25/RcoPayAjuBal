@@ -127,6 +127,14 @@
                               <oa:messageTextInput id="D002imssSta" viewAttr="D002imssSta" dataType="NUMBER" required="yes"/>
                            </ui:contents>
                         </oa:column>
+                        <oa:column id="CuotaPatronalCol" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader411" prompt="Cuota Patronal"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="CuotaPatronal" viewAttr="CuotaPatronal" dataType="NUMBER" required="yes"/>
+                           </ui:contents>
+                        </oa:column>
                         <oa:column id="GrupoNominaCol">
                            <ui:columnHeader>
                               <oa:sortableHeader id="sortableHeader11" prompt="Grupo Nomina"/>

@@ -25,7 +25,8 @@ SELECT XxRcoPayAjuBzaProjEO.ID,
        XxRcoPayAjuBzaProjEO.CREATION_DATE, 
        XxRcoPayAjuBzaProjEO.LAST_UPDATED_BY, 
        XxRcoPayAjuBzaProjEO.LAST_UPDATE_DATE, 
-       XxRcoPayAjuBzaProjEO.LAST_UPDATE_LOGIN
+       XxRcoPayAjuBzaProjEO.LAST_UPDATE_LOGIN,
+       XxRcoPayAjuBzaProjEO.CUOTA_PATRONAL
 FROM XXRCO_PAY_AJU_BZA_PROJ XxRcoPayAjuBzaProjEO
 ORDER BY XxRcoPayAjuBzaProjEO.NUMERO_MES ASC , XxRcoPayAjuBzaProjEO.REGISTRO_PATRONAL ASC
    ]]></SQLQuery>
@@ -160,5 +161,11 @@ ORDER BY XxRcoPayAjuBzaProjEO.NUMERO_MES ASC , XxRcoPayAjuBzaProjEO.REGISTRO_PAT
       EntityAttrName="LastUpdateLogin"
       EntityUsage="XxRcoPayAjuBzaProjEO"
       AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CuotaPatronal"
+      EntityAttrName="CuotaPatronal"
+      EntityUsage="XxRcoPayAjuBzaProjEO"
+      AliasName="CUOTA_PATRONAL" >
    </ViewAttribute>
 </ViewObject>

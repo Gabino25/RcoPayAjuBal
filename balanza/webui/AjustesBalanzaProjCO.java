@@ -44,8 +44,8 @@ public class AjustesBalanzaProjCO extends OAControllerImpl
     OAAdvancedTableBean xxRcoPayAjuBzaProjVORNBean =  (OAAdvancedTableBean)webBean.findChildRecursive("XxRcoPayAjuBzaProjVORN");
     OAMessageTextInputBean textInputBean = null; 
     OAColumnBean oaColumnBean = null; 
-    String[] arrTextInputs ={"CalcCuotaSsErInf","CalcCuotaSsErRet","CalcCuotaSsErSta","D002imss","D002imssSta"};
-    String[] arrColumns ={"CalcCuotaSsErInfCol","CalcCuotaSsErRetCol","CalcCuotaSsErStaCol","D002imssCol","D002imssStaCol"};
+    String[] arrTextInputs ={"CalcCuotaSsErInf","CalcCuotaSsErRet","CalcCuotaSsErSta","D002imss","D002imssSta","CuotaPatronal"};
+    String[] arrColumns ={"CalcCuotaSsErInfCol","CalcCuotaSsErRetCol","CalcCuotaSsErStaCol","D002imssCol","D002imssStaCol","CuotaPatronalCol"};
       if(null!=xxRcoPayAjuBzaProjVORNBean){
           for(int i=0;i<arrTextInputs.length;i++){
               textInputBean = (OAMessageTextInputBean)xxRcoPayAjuBzaProjVORNBean.findChildRecursive(arrTextInputs[i]);

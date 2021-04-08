@@ -32,12 +32,16 @@ public class XxRcoPayAjuBzaProjEOImpl extends OAEntityImpl {
     public static final int LASTUPDATEDBY = 14;
     public static final int LASTUPDATEDATE = 15;
     public static final int LASTUPDATELOGIN = 16;
+    public static final int CUOTAPATRONAL = 17;
+
+
     private static OAEntityDefImpl mDefinitionObject;
 
     /**This is the default constructor (do not remove)
      */
     public XxRcoPayAjuBzaProjEOImpl() {
     }
+
 
     /**Retrieves the definition object for this instance class.
      */
@@ -310,6 +314,8 @@ public class XxRcoPayAjuBzaProjEOImpl extends OAEntityImpl {
             return getLastUpdateDate();
         case LASTUPDATELOGIN:
             return getLastUpdateLogin();
+        case CUOTAPATRONAL:
+            return getCuotaPatronal();
         default:
             return super.getAttrInvokeAccessor(index, attrDef);
         }
@@ -371,10 +377,25 @@ public class XxRcoPayAjuBzaProjEOImpl extends OAEntityImpl {
         case LASTUPDATELOGIN:
             setLastUpdateLogin((Number)value);
             return;
+        case CUOTAPATRONAL:
+            setCuotaPatronal((Number)value);
+            return;
         default:
             super.setAttrInvokeAccessor(index, value, attrDef);
             return;
         }
+    }
+
+    /**Gets the attribute value for CuotaPatronal, using the alias name CuotaPatronal
+     */
+    public Number getCuotaPatronal() {
+        return (Number)getAttributeInternal(CUOTAPATRONAL);
+    }
+
+    /**Sets <code>value</code> as the attribute value for CuotaPatronal
+     */
+    public void setCuotaPatronal(Number value) {
+        setAttributeInternal(CUOTAPATRONAL, value);
     }
 
     /**Creates a Key object based on given key constituents

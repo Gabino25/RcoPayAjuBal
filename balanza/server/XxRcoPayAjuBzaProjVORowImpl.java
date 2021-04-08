@@ -30,6 +30,7 @@ public class XxRcoPayAjuBzaProjVORowImpl extends OAViewRowImpl {
     public static final int LASTUPDATEDBY = 14;
     public static final int LASTUPDATEDATE = 15;
     public static final int LASTUPDATELOGIN = 16;
+    public static final int CUOTAPATRONAL = 17;
 
     /**This is the default constructor (do not remove)
      */
@@ -285,6 +286,8 @@ public class XxRcoPayAjuBzaProjVORowImpl extends OAViewRowImpl {
             return getLastUpdateDate();
         case LASTUPDATELOGIN:
             return getLastUpdateLogin();
+        case CUOTAPATRONAL:
+            return getCuotaPatronal();
         default:
             return super.getAttrInvokeAccessor(index, attrDef);
         }
@@ -346,9 +349,24 @@ public class XxRcoPayAjuBzaProjVORowImpl extends OAViewRowImpl {
         case LASTUPDATELOGIN:
             setLastUpdateLogin((Number)value);
             return;
+        case CUOTAPATRONAL:
+            setCuotaPatronal((Number)value);
+            return;
         default:
             super.setAttrInvokeAccessor(index, value, attrDef);
             return;
         }
+    }
+
+    /**Gets the attribute value for the calculated attribute CuotaPatronal
+     */
+    public Number getCuotaPatronal() {
+        return (Number) getAttributeInternal(CUOTAPATRONAL);
+    }
+
+    /**Sets <code>value</code> as the attribute value for the calculated attribute CuotaPatronal
+     */
+    public void setCuotaPatronal(Number value) {
+        setAttributeInternal(CUOTAPATRONAL, value);
     }
 }
