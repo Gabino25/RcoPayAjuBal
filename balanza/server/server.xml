@@ -15,6 +15,11 @@
       ObjectType="AppModule" >
    </Containee>
    <Containee
+      Name="XxRcoPayAjuBzaProjRaVO"
+      FullName="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjRaVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
       Name="XxRcoPayAjuBzaProjVO"
       FullName="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjVO"
       ObjectType="ViewObject" >

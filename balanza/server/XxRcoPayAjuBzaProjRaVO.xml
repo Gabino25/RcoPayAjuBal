@@ -2,11 +2,11 @@
 <!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
 
 <ViewObject
-   Name="XxRcoPayAjuBzaProjVO"
+   Name="XxRcoPayAjuBzaProjRaVO"
    BindingStyle="OracleName"
    CustomQuery="true"
-   RowClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjVORowImpl"
-   ComponentClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjVOImpl"
+   RowClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjRaVORowImpl"
+   ComponentClass="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjRaVOImpl"
    UseGlueCode="false" >
    <SQLQuery><![CDATA[
 SELECT XxRcoPayAjuBzaProjEO.ID, 
@@ -25,10 +25,10 @@ SELECT XxRcoPayAjuBzaProjEO.ID,
        XxRcoPayAjuBzaProjEO.CREATION_DATE, 
        XxRcoPayAjuBzaProjEO.LAST_UPDATED_BY, 
        XxRcoPayAjuBzaProjEO.LAST_UPDATE_DATE, 
-       XxRcoPayAjuBzaProjEO.LAST_UPDATE_LOGIN,
+       XxRcoPayAjuBzaProjEO.LAST_UPDATE_LOGIN, 
        XxRcoPayAjuBzaProjEO.CUOTA_PATRONAL
 FROM XXRCO_PAY_AJU_BZA_PROJ XxRcoPayAjuBzaProjEO
-ORDER BY XxRcoPayAjuBzaProjEO.NUMERO_MES ASC , XxRcoPayAjuBzaProjEO.PROYECTO ASC
+WHERE 1=2 /** Solo para agregar Registros**/
    ]]></SQLQuery>
    <DesignTime>
       <Attr Name="_isCodegen" Value="true" />
@@ -40,8 +40,7 @@ ORDER BY XxRcoPayAjuBzaProjEO.NUMERO_MES ASC , XxRcoPayAjuBzaProjEO.PROYECTO ASC
       Name="XxRcoPayAjuBzaProjEO"
       Entity="xxrco.oracle.apps.pay.balanza.schema.server.XxRcoPayAjuBzaProjEO" >
       <DesignTime>
-         <Attr Name="_queryClause" Value="true" />
-         <Attr Name="_queryOrderBy" Value="NUMERO_MES ASC , REGISTRO_PATRONAL ASC" />
+         <Attr Name="_queryClause" Value="false" />
       </DesignTime>
    </EntityUsage>
    <ViewAttribute

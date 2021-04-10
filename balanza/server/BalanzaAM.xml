@@ -37,4 +37,8 @@
       Name="MesProjectsVO1"
       ViewObjectName="xxrco.oracle.apps.pay.balanza.pop.MesProjectsVO" >
    </ViewUsage>
+   <ViewUsage
+      Name="XxRcoPayAjuBzaProjRaVO1"
+      ViewObjectName="xxrco.oracle.apps.pay.balanza.server.XxRcoPayAjuBzaProjRaVO" >
+   </ViewUsage>
 </AppModule>

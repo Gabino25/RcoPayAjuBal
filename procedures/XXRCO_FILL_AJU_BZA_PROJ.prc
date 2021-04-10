@@ -27,6 +27,7 @@ CREATE OR REPLACE PROCEDURE APPS.XXRCO_FILL_AJU_BZA_PROJ(PSO_ERRMSG       OUT VA
     from fnd_lookup_values
    where lookup_type = 'XXRCO_HR_REG_PAT_PROYECTO'
      and language = 'ESA'
+     and description like '%'||cur_grupo_nomina||'%'
      order by registro_patronal desc; 
      
   MesInfoRec    getMesInfo%ROWTYPE;
@@ -82,5 +83,6 @@ BEGIN
  
 EXCEPTION WHEN OTHERS THEN 
   PSO_ERRMSG := 'EXCEPTION XXRCO_FILL_AJU_BZA_PROJ:'||sqlerrm||','||sqlcode;   
-END XXRCO_FILL_AJU_BZA_PROJ;
+END XXRCO_FILL_AJU_BZA_PROJ; 
 /
+

@@ -247,4 +247,26 @@ public class BalanzaAMImpl extends OAApplicationModuleImpl {
         iterator.closeRowSetIterator();
     
     }
+
+    /**Container's getter for XxRcoPayAjuBzaProjRaVO1
+     */
+    public XxRcoPayAjuBzaProjRaVOImpl getXxRcoPayAjuBzaProjRaVO1() {
+        return (XxRcoPayAjuBzaProjRaVOImpl)findViewObject("XxRcoPayAjuBzaProjRaVO1");
+    }
+
+    public void PayAjuBzaProjRa() {
+     System.out.println("Entra BalanzaAMImpl.PayAjuBzaProjRa");
+     XxRcoPayAjuBzaProjRaVOImpl  xxRcoPayAjuBzaProjRaVOImpl = getXxRcoPayAjuBzaProjRaVO1();
+     XxRcoPayAjuBzaProjRaVORowImpl  xxRcoPayAjuBzaProjRaVORowImpl = null; 
+     if(!xxRcoPayAjuBzaProjRaVOImpl.isPreparedForExecution()){
+         xxRcoPayAjuBzaProjRaVOImpl.executeQuery();
+     }
+     xxRcoPayAjuBzaProjRaVOImpl.last();
+     xxRcoPayAjuBzaProjRaVOImpl.next();   
+     xxRcoPayAjuBzaProjRaVORowImpl = (XxRcoPayAjuBzaProjRaVORowImpl)xxRcoPayAjuBzaProjRaVOImpl.createRow();
+     xxRcoPayAjuBzaProjRaVORowImpl.setNewRowState(xxRcoPayAjuBzaProjRaVORowImpl.STATUS_INITIALIZED);
+     xxRcoPayAjuBzaProjRaVOImpl.insertRow(xxRcoPayAjuBzaProjRaVORowImpl);
+     System.out.println("Sale BalanzaAMImpl.PayAjuBzaProjRa");
+    }
+    
 }

@@ -74,6 +74,7 @@ public class AjustesBalanzaProjCO extends OAControllerImpl
   {
     super.processFormRequest(pageContext, webBean);
     String strEventParam = pageContext.getParameter(this.EVENT_PARAM); 
+    String strSourceParam = pageContext.getParameter(this.SOURCE_PARAM); 
     System.out.println("strEventParam:"+strEventParam);  
     OAMessageTextInputBean textInputBean = null; 
     OAMessageChoiceBean  messageChoiceBean = null; 
@@ -149,6 +150,9 @@ public class AjustesBalanzaProjCO extends OAControllerImpl
                 strGrupoNomina = messageChoiceBean.getSelectionText(pageContext).toString(); 
                 System.out.println(messageChoiceBean.getSelectionText(pageContext));
             }
+           if(null==strAnio||null==strGrupoNomina||"".equals(strAnio)||"".equals(strGrupoNomina)){
+               throw new OAException("No se han ingresado los parametros",OAException.ERROR); 
+           } 
           try {
               numAnio = new oracle.jbo.domain.Number(strAnio);
           } catch (SQLException e) {
@@ -199,6 +203,10 @@ public class AjustesBalanzaProjCO extends OAControllerImpl
           /* pageContext.forwardImmediatelyToCurrentPage(null, false, null); */
            balanzaAMImpl.initPOPSProjects(); 
           throw new OAException("Se Borraron los ajustes",OAException.INFORMATION);                             
+      }
+      
+      if("addRows".equals(strEventParam)&&"XxRcoPayAjuBzaProjRaVORN".equals(strSourceParam)){
+          balanzaAMImpl.PayAjuBzaProjRa();
       }
       
   }

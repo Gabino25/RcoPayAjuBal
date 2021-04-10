@@ -81,7 +81,7 @@
                         </oa:column>
                         <oa:column id="RegistroPatronalCol" totalValue="false" columnDataFormat="textFormat" cellNoWrapFormat="true">
                            <ui:columnHeader>
-                              <oa:sortableHeader id="sortableHeader311121" prompt="Registo Patronal"/>
+                              <oa:sortableHeader id="sortableHeader311121" prompt="Registro Patronal"/>
                            </ui:columnHeader>
                            <ui:contents>
                               <oa:messageStyledText id="RegistroPatronal" viewAttr="RegistroPatronal" required="yes" dataType="VARCHAR2"/>
@@ -218,6 +218,112 @@
                         </oa:cellFormat>
                      </ui:contents>
                   </oa:rowLayout>
+               </ui:contents>
+            </oa:hideShowHeader>
+            <oa:hideShowHeader id="RegistroAdicional" text="Crear Registro Adicional">
+               <ui:contents>
+                  <oa:advancedTable id="XxRcoPayAjuBzaProjRaVORN" viewName="XxRcoPayAjuBzaProjRaVO1" blockSize="200">
+                     <ui:contents>
+                        <oa:column id="AnioCol1">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader12" prompt="Año"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageChoice id="anio1" dataType="NUMBER" viewAttr="Anio" prompt="Año" required="yes" pickListViewDef="xxrco.oracle.apps.pay.balanza.pop.AnioProjectsVO" pickListDispAttr="Meaning" pickListValAttr="Code"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="MesCol1">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader21" prompt="Mes"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageChoice id="mes1" viewAttr="NumeroMes" pickListViewDef="xxrco.oracle.apps.pay.balanza.pop.MesProjectsVO" pickListDispAttr="Meaning" pickListValAttr="Code" prompt="Mes" required="yes"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="ProyectoCol1" totalValue="false" columnDataFormat="textFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader311122" prompt="Proyecto"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageStyledText id="Proyecto1" viewAttr="Proyecto" required="yes" dataType="VARCHAR2"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="RegistroPatronalCol1" totalValue="false" columnDataFormat="textFormat" cellNoWrapFormat="true">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader3111211" prompt="Registro Patronal"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageStyledText id="RegistroPatronal1" viewAttr="RegistroPatronal" required="yes" dataType="VARCHAR2"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="CalcCuotaSsErInfCol1" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader3111212" prompt="Cálculo de Cuota de Seguro Social ER  INFONAVIT"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="CalcCuotaSsErInf1" viewAttr="CalcCuotaSsErInf" required="yes" dataType="NUMBER"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="CalcCuotaSsErRetCol1" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader3111213" prompt="Cálculo de Cuota de Seguro Social ER  Retirement"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="CalcCuotaSsErRet1" viewAttr="CalcCuotaSsErRet" required="yes" dataType="NUMBER"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="CalcCuotaSsErStaCol1" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader311111" prompt="Cálculo de Cuota de Seguro Social ER  Separation due to Age"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="CalcCuotaSsErSta1" viewAttr="CalcCuotaSsErSta" required="yes" dataType="NUMBER"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="D002imssCol1" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader412" prompt="D002 I.M.S.S."/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="D002imss1" viewAttr="D002imss" dataType="NUMBER" required="yes"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="D002imssStaCol1" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader413" prompt="D002 I.M.S.S. Separation due to Age"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="D002imssSta1" viewAttr="D002imssSta" dataType="NUMBER" required="yes"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="CuotaPatronalCol1" totalValue="true" columnDataFormat="numberFormat">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader4111" prompt="Cuota Patronal"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageTextInput id="CuotaPatronal1" viewAttr="CuotaPatronal" dataType="NUMBER" required="yes"/>
+                           </ui:contents>
+                        </oa:column>
+                        <oa:column id="GrupoNominaCol1">
+                           <ui:columnHeader>
+                              <oa:sortableHeader id="sortableHeader111" prompt="Grupo Nomina"/>
+                           </ui:columnHeader>
+                           <ui:contents>
+                              <oa:messageChoice id="GrupoNominaRa" viewAttr="GrupoNomina" prompt="Grupo Nomina" required="yes" pickListViewDef="xxrco.oracle.apps.pay.balanza.pop.GrupoNominaProjectsVO" pickListDispAttr="Meaning" pickListValAttr="Code"/>
+                           </ui:contents>
+                        </oa:column>
+                     </ui:contents>
+                     <ui:footer>
+                        <oa:tableFooter id="tableFooter11">
+                           <ui:total>
+                              <oa:totalRow id="totalRow11"/>
+                           </ui:total>
+                           <ui:contents>
+                              <oa:addTableRow id="addTableRow1" rows="1" autoInsertion="false" text="Agregar Registro"/>
+                           </ui:contents>
+                        </oa:tableFooter>
+                     </ui:footer>
+                  </oa:advancedTable>
                </ui:contents>
             </oa:hideShowHeader>
             <oa:pageButtonBar id="region92">
